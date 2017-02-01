@@ -1,0 +1,20 @@
+<div ng-controller='qController'>
+  <a href='#/dash' ng-show='loggedIn' id='left'>Home</a> |
+  <a href="" ng-click='newAnswer(thisQuestion._id)'>Answer the Question</a>
+
+  <br>
+
+  <h1>{{thisQuestion.question}}</h1>
+  <h3>{{thisQuestion.description}}</h3>
+
+  <div ng-repeat="a in answers | orderBy: '-likes'" class='answerList'>
+    {{a._answerBy[0].name}}: 
+    <br>
+    <strong> {{a.answer}} </strong>
+    <br>
+    {{a.detail}}
+    <br>
+    <span> Like Count: {{a.likes || 0}} </span>
+    <span> <a href="" ng-click='like(a._id)'>Like!</a> </span>
+  </div>
+</div>

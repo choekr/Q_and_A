@@ -1,0 +1,10 @@
+<div ng-controller='userController'>
+  <form>
+    <p ng-repeat='e in err' style='color:red'>{{e}}</p>
+    <br>
+
+    Name: 
+    <input type='text' ng-model='user.name'>
+    <button ng-click='login()'>Login/Register</button>
+  </form>
+</div>

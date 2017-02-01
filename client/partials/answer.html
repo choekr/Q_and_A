@@ -1,0 +1,28 @@
+<div ng-controller='qController'>
+  <a href='#/dash' ng-show='loggedIn' id='left'>Home</a> |
+  <a href="" ng-click='showAnswers(thisQuestion._id)'>Go back to Question</a>
+
+  <h1>{{thisQuestion.question}}</h1>
+  <h3>{{thisQuestion.description}}</h3>
+  
+  <p ng-repeat='e in err' style='color: red'>{{e}}</p>
+
+  <div class='textarea'>
+    <p class='textarea_title'>
+      Your Answer:
+    </p>
+    <textarea ng-model='newA.answer'></textarea>
+  </div>
+
+  <div class='textarea'>
+    <p class='textarea_title'>
+      Supporting details for your answer(optional):
+    </p>
+    <textarea ng-model='newA.detail'></textarea>
+  </div>
+
+  <button ng-click='backHome()'>Cancel</button>
+  <button ng-click='submitA(thisQuestion._id)'>Submit</button>
+</div>
+
+</div>

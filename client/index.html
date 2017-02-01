@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='app'>
+  <head>
+    <meta charset="utf-8">
+    <title>Friends</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+    
+    <script type="text/javascript" src='app.js'></script>
+    <script type="text/javascript" src='./controllers/c_users.js'></script>
+    <script type="text/javascript" src='./factories/f_users.js'></script>
+    <script type="text/javascript" src='./controllers/c_questions.js'></script>
+    <script type="text/javascript" src='./factories/f_questions.js'></script>
+    <link rel="stylesheet" type="text/css" href="./static/css/style.css">
+  </head>
+
+  <body>
+    <h1 ng-hide='loggedIn'>Q & A</h1>
+    <a href="/logout" ng-show='loggedIn' id='right'>Logout</a>
+    <div ng-view>
+
+    </div>
+  </body>
+
+</html>

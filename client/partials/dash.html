@@ -1,0 +1,28 @@
+<div ng-controller='userController'>
+  <h1> Hi {{curUser.name}}</h1>
+
+  <div ng-controller='qController'>
+    <a href="" ng-click='newQuestion()'>Add a Question</a>
+
+    <p id='search'>
+      Search:
+      <input type='text' ng-model='search.question'>
+    </p>
+
+    <table>
+      <tr>
+        <th>Question</th>
+        <th>Answers</th>
+        <th>Action</th>
+      </tr>
+      <tr ng-repeat='q in allQuestions | filter:search'>
+        <td>{{q.question}}</td>
+        <td>{{q._answers.length}}</td>
+        <td>
+          <a id='table_option' href="" ng-click='showAnswers(q._id)'>Show</a> 
+          <a id='table_option' href="" ng-click='newAnswer(q._id)'>Answer</a>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

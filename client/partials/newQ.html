@@ -1,0 +1,20 @@
+<div ng-controller='qController'>
+  <h1>New Question</h1>
+  <p ng-repeat='e in err' style='color: red'>{{e}}</p>
+
+  <div class='textarea'>
+    <p class='textarea_title'>
+      Question:
+    </p>
+    <textarea ng-model='newQ.question'></textarea>
+  </div>
+  <div class='textarea'>
+    <p class='textarea_title'>
+      Description(optional):
+    </p>
+    <textarea ng-model='newQ.description'></textarea>
+  </div>
+
+  <button ng-click='backHome()'>Cancel</button>
+  <button ng-click='submitQ()'>Submit</button>
+</div>

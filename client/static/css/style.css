@@ -1,0 +1,53 @@
+body {
+  width: 50%;
+  margin: auto;
+}
+
+#right {
+  display: inline-block;
+  float: right;
+}
+
+#search {
+  text-align: right;
+}
+
+table{
+  float: right;
+  padding: 10px;
+  border-collapse: collapse;
+  width: 100%;
+  border: solid 1px black;
+}
+
+th {
+  padding:10px;
+  border: solid 1px black;
+}
+td {
+  padding: 10px;
+  border: solid 1px black;
+}
+
+textarea {
+  display: inline-block;
+  width: 50%;
+  height: 50px;
+  margin-bottom: 20px;
+
+}
+
+.textarea_title {
+  margin-top: 0px;
+  display: inline-block;
+  width: 150px;
+}
+
+.textarea * {
+  vertical-align: text-top;
+}
+
+.answerList {
+  border-collapse: collapse;
+  border: solid 1px black;
+}
