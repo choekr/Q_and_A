@@ -41,10 +41,11 @@ app.controller('qController', function($scope, userFactory, qFactory, $location,
 
   $scope.submitQ = function(){
     $scope.err = [];
-    if($scope.newQ.question.length < 10){
+    if(!$scope.newQ || $scope.newQ.question.length < 10){
       $scope.err.push('Your question must be at least 10 characters long');
     } else {
-      qFactory.submitQ($scope.newQ);
+      console.log($scope.newQ);
+      // qFactory.submitQ($scope.newQ);
     }
   }
 
@@ -58,7 +59,7 @@ app.controller('qController', function($scope, userFactory, qFactory, $location,
 
   $scope.submitA = function(){
     $scope.err = [];
-    if($scope.newA.answer.length < 5){
+    if(!$scope.newA || $scope.newA.answer.length < 5){
       $scope.err.push('Your answer must be at least 5 characters long');
     } else {
       $scope.newA.question = $scope.thisQuestion._id;
