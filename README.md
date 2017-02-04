@@ -1,7 +1,5 @@
 # Q_and_A
 
-+++++++++++++++++++++++++++++++
-
 Q and A board app built with full MEAN stack (MongoDB, Express, Angular, Node.js)
 
 Features
