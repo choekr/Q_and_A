@@ -1,4 +1,4 @@
-<div ng-controller='userController'>
+<div ng-controller='userController' id='dash'>
   <h1> Hi {{curUser.name}}</h1>
 
   <div ng-controller='qController'>
@@ -19,7 +19,7 @@
         <td>{{q.question}}</td>
         <td>{{q._answers.length}}</td>
         <td>
-          <a id='table_option' href="" ng-click='showAnswers(q._id)'>Show</a> 
+          <a id='table_option' href="" ng-click='showAnswers(q._id)'>Show</a>
           <a id='table_option' href="" ng-click='newAnswer(q._id)'>Answer</a>
         </td>
       </tr>

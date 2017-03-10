@@ -1,6 +1,10 @@
 body {
   width: 50%;
   margin: auto;
+
+  background-image: url('./../img/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #right {
@@ -13,20 +17,26 @@ body {
 }
 
 table{
+  border-radius: 25px;
   float: right;
   padding: 10px;
   border-collapse: collapse;
   width: 100%;
-  border: solid 1px black;
+  /*border: solid 1px black;*/
+  background-color: white;
 }
 
 th {
   padding:10px;
-  border: solid 1px black;
+  /*border-radius: 25px;*/
+  /*border: solid 1px black;*/
 }
 td {
   padding: 10px;
-  border: solid 1px black;
+  text-align: center;
+  border-top: dotted 1px gray;
+  /*border-radius: 25px;*/
+  /*border: solid 1px black;*/
 }
 
 textarea {
